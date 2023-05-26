@@ -6,21 +6,37 @@
     <app-header></app-header>
   </div>
 
-  <mat-drawer-container class="demoapp-container">
-    <mat-drawer #drawer [opened]="true" class="demoapp-sidenav" mode="side">
+  <mat-drawer-container class="container">
+    <mat-drawer #drawer [opened]="true" class="sidenav" mode="side">
       <div>
         <div>
           <button [routerLink]="['dashboard']" color="primary" mat-button>
-            <mat-icon>dashboard</mat-icon>&nbsp;{{'nav.dashboard' | translate }}</button>
+            <mat-icon>dashboard</mat-icon>&nbsp;{{'Dashboard' }}</button>
+        </div>
+        <div>
+          <button [routerLink]="['person']" color="primary" mat-button>
+            <mat-icon>person</mat-icon>Person</button>
+        </div>
+        <div>
+          <button [routerLink]="['meal']" color="primary" mat-button>
+            <mat-icon>set_meal</mat-icon>&nbsp;{{'Meal' }}</button>
+        </div>
+        <div>
+          <button [routerLink]="['task']" color="primary" mat-button>
+            <mat-icon>task</mat-icon>&nbsp;{{'Task'}}</button>
+        </div>
+        <div>
+          <button [routerLink]="['team']" color="primary" mat-button>
+            <mat-icon>groups</mat-icon>&nbsp;{{'Team'}}</button>
         </div>
         <div *ngIf="oauthService.hasValidAccessToken()" style="margin-top: 50px">
           <button (click)="logout()" color="warn" mat-button>
             <mat-icon>logout</mat-icon>
-            {{ 'nav.logout' | translate }}
+            {{ 'Logout' }}
           </button>
         </div>
       </div>
-      <div style="margin-top: 50px;margin-left: 20px;">
+      <!--<div style="margin-top: 50px;margin-left: 20px;">
         <mat-form-field style="width: 80%">
           <mat-label>{{ 'main.lang' | translate }}</mat-label>
           <mat-select #langSelect (valueChange)="setLanguage(langSelect.value)" [value]="translate.currentLang">
@@ -28,10 +44,10 @@
             <mat-option value="en">English</mat-option>
           </mat-select>
         </mat-form-field>
-      </div>
+      </div> -->
     </mat-drawer>
 
-    <div class="demoapp-sidenav-content">
+    <div class="sidenav-content">
       <router-outlet></router-outlet>
     </div>
 
