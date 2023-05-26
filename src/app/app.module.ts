@@ -35,14 +35,15 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatMomentDateModule} from '@angular/material-moment-adapter';
 import {environment} from '../environments/environment';
-import { PersonListComponent } from './pages/person-list/person-list.component';
-import { PersonDetailComponent } from './pages/person-detail/person-detail.component';
 import { MealDetailComponent } from './pages/meal-detail/meal-detail.component';
-import { MealListComponent } from './pages/meal-list/meal-list.component';
 import { TaskListComponent } from './pages/task-list/task-list.component';
 import { TaskDetailComponent } from './pages/task-detail/task-detail.component';
 import { TeamDetailComponent } from './pages/team-detail/team-detail.component';
 import { TeamListComponent } from './pages/team-list/team-list.component';
+import PersonDetailComponent from './pages/person-detail/person-detail.component';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { PersonListComponent } from './pages/person-list/person-list.component';
+import MealListComponent from './pages/meal-list/meal-list.component';
 
 export const authConfig: AuthConfig = {
   issuer: 'http://localhost:8080/realms/ILV',
@@ -84,6 +85,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     TaskDetailComponent,
     TeamDetailComponent,
     TeamListComponent,
+    ConfirmDialogComponent
+
   ],
   imports: [
     BrowserModule,
