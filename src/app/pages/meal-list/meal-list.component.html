@@ -3,7 +3,7 @@
     <mat-toolbar *appIsInRole="'admin'" color="primary">
       <span>
         <button (click)="add()" *appIsInRole="'admin'" color="primary" mat-button style="color: white">
-          <mat-icon>add</mat-icon>
+          <mat-icon>create</mat-icon>
         </button>
       </span>
     </mat-toolbar>
@@ -22,32 +22,32 @@
     </ng-container>
 
     <ng-container matColumnDef="id">
-      <th *matHeaderCellDef mat-header-cell></th>
+      <th *matHeaderCellDef mat-header-cell>id</th>
       <td *matCellDef="let element" mat-cell> {{element.id}} </td>
     </ng-container>
 
     <ng-container matColumnDef="designation">
-      <th *matHeaderCellDef mat-header-cell></th>
+      <th *matHeaderCellDef mat-header-cell>designation</th>
       <td *matCellDef="let element" mat-cell> {{element.designation}} </td>
     </ng-container>
 
     <ng-container matColumnDef="sequence">
-      <th *matHeaderCellDef mat-header-cell></th>
+      <th *matHeaderCellDef mat-header-cell>sequence</th>
       <td *matCellDef="let element" mat-cell> {{element.sequence}} </td>
     </ng-container>
 
     <ng-container matColumnDef="cost">
-      <th *matHeaderCellDef mat-header-cell></th>
+      <th *matHeaderCellDef mat-header-cell>cost</th>
       <td *matCellDef="let element" mat-cell> {{element.cost}} </td>
     </ng-container>
 
     <ng-container matColumnDef="date setting">
-      <th *matHeaderCellDef mat-header-cell></th>
+      <th *matHeaderCellDef mat-header-cell>date setting</th>
       <td *matCellDef="let element" mat-cell> {{element.dateSetting}} </td>
     </ng-container>
 
     <ng-container matColumnDef="remarks">
-      <th *matHeaderCellDef mat-header-cell></th>
+      <th *matHeaderCellDef mat-header-cell>remarks</th>
       <td *matCellDef="let element" mat-cell> {{element.remarks}} </td>
     </ng-container>
     <tr *matHeaderRowDef="columns" mat-header-row></tr>

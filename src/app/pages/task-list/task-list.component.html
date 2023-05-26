@@ -3,7 +3,7 @@
     <mat-toolbar *appIsInRole="'admin'" color="primary">
       <span>
         <button (click)="add()" *appIsInRole="'admin'" color="primary" mat-button style="color: white">
-          <mat-icon>add</mat-icon>
+          <mat-icon>note_add</mat-icon><mat-card-title>Add</mat-card-title>
         </button>
       </span>
     </mat-toolbar>
@@ -20,41 +20,41 @@
         </button>
       </td>
     </ng-container>
-
     <ng-container matColumnDef="id">
-      <th *matHeaderCellDef mat-header-cell></th>
+      <th *matHeaderCellDef mat-header-cell>id</th>
       <td *matCellDef="let element" mat-cell> {{element.id}} </td>
     </ng-container>
-
     <ng-container matColumnDef="designation">
-      <th *matHeaderCellDef mat-header-cell></th>
+      <th *matHeaderCellDef mat-header-cell>designation</th>
       <td *matCellDef="let element" mat-cell> {{element.designation}} </td>
     </ng-container>
 
     <ng-container matColumnDef="sequence">
-      <th *matHeaderCellDef mat-header-cell></th>
+      <th *matHeaderCellDef mat-header-cell>sequence</th>
       <td *matCellDef="let element" mat-cell> {{element.sequence}} </td>
     </ng-container>
 
     <ng-container matColumnDef="taskDuration">
-      <th *matHeaderCellDef mat-header-cell></th>
+      <th *matHeaderCellDef mat-header-cell>task duration</th>
       <td *matCellDef="let element" mat-cell> {{element.taskDuration}} </td>
     </ng-container>
 
     <ng-container matColumnDef="date setting">
-      <th *matHeaderCellDef mat-header-cell></th>
+      <th *matHeaderCellDef mat-header-cell>date setting</th>
       <td *matCellDef="let element" mat-cell> {{element.dateSetting}} </td>
     </ng-container>
 
     <ng-container matColumnDef="remarks">
-      <th *matHeaderCellDef mat-header-cell></th>
+      <th *matHeaderCellDef mat-header-cell>remarks</th>
       <td *matCellDef="let element" mat-cell> {{element.remarks}} </td>
     </ng-container>
     <tr *matHeaderRowDef="columns" mat-header-row></tr>
     <tr *matRowDef="let row; columns: columns;" mat-row></tr>
+
   </table>
   <mat-paginator [pageSizeOptions]="[3, 10]" [pageSize]="10"
                  showFirstLastButtons>
   </mat-paginator>
+
 </div>
 
