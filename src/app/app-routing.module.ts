@@ -13,7 +13,7 @@ import { PersonListComponent } from './pages/person-list/person-list.component';
 import { TaskListComponent } from './pages/task-list/task-list.component';
 import { TeamListComponent } from './pages/team-list/team-list.component';
 import { MealDetailComponent } from './pages/meal-detail/meal-detail.component';
-import  MealListComponent  from './pages/meal-list/meal-list.component';
+import { MealListComponent } from './pages/meal-list/meal-list.component';
 
 const routes: Routes = [
 {path: '', component: DashboardComponent},
@@ -36,6 +36,10 @@ const routes: Routes = [
   data: {roles: [AppRoles.Admin]}
 },
 {
+  path: 'meal', canActivate: [AppAuthGuard], component: MealDetailComponent, pathMatch: 'full',
+  data: {roles: [AppRoles.Admin]}
+},
+{
   path: 'meal/:id', canActivate: [AppAuthGuard], component: MealDetailComponent, pathMatch: 'full',
   data: {roles: [AppRoles.Admin]}
 },
@@ -44,11 +48,19 @@ const routes: Routes = [
   data: {roles: [AppRoles.Admin]}
 },
 {
+  path: 'task', canActivate: [AppAuthGuard], component: TaskDetailComponent, pathMatch: 'full',
+  data: {roles: [AppRoles.Admin]}
+},
+{
   path: 'task/:id', canActivate: [AppAuthGuard], component: TaskDetailComponent, pathMatch: 'full',
   data: {roles: [AppRoles.Admin]}
 },
 {
   path: 'teams', canActivate: [AppAuthGuard], component: TeamListComponent, pathMatch: 'full',
+  data: {roles: [AppRoles.Admin]}
+},
+{
+  path: 'team', canActivate: [AppAuthGuard], component: TeamDetailComponent, pathMatch: 'full',
   data: {roles: [AppRoles.Admin]}
 },
 {

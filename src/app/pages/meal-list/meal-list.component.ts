@@ -17,7 +17,7 @@ import { MatTableDataSource } from '@angular/material/table';
   templateUrl: './meal-list.component.html',
   styleUrls: ['./meal-list.component.scss'],
 })
-export default class MealListComponent extends BaseComponent implements OnInit,AfterViewInit  {
+export class MealListComponent extends BaseComponent implements OnInit,AfterViewInit  {
  mealDataSource = new MatTableDataSource<Meal>();
   @ViewChild(MatPaginator) paginator?: MatPaginator;
 

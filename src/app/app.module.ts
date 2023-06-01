@@ -43,7 +43,7 @@ import { TeamListComponent } from './pages/team-list/team-list.component';
 import PersonDetailComponent from './pages/person-detail/person-detail.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { PersonListComponent } from './pages/person-list/person-list.component';
-import MealListComponent from './pages/meal-list/meal-list.component';
+import { MealListComponent } from './pages/meal-list/meal-list.component';
 
 export const authConfig: AuthConfig = {
   issuer: 'http://localhost:8080/realms/ILV',

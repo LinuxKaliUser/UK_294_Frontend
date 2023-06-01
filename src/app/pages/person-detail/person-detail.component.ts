@@ -18,6 +18,9 @@ export default class PersonDetailComponent extends BaseComponent implements OnIn
   person = new Person();
   public objForm = new UntypedFormGroup({
     name: new UntypedFormControl(''),
+    task: new UntypedFormControl(''),
+    dateSetting: new UntypedFormControl(''),
+    remarks: new UntypedFormControl(''),
   });
 
   constructor(private router: Router, private headerService: HeaderService, private route: ActivatedRoute,

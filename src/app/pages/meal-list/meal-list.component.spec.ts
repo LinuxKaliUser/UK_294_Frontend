@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import MealListComponent from './meal-list.component';
+import { MealListComponent } from './meal-list.component';
 
 
 
