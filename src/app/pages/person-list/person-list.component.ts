@@ -26,7 +26,7 @@ export class PersonListComponent extends BaseComponent implements OnInit,AfterVi
     private headerService: HeaderService, private router: Router, private snackBar: MatSnackBar,
     protected override translate: TranslateService) {
     super(translate);
-    this.headerService.setPage('persons');
+    this.headerService.setPage('Persons');
   }
 
   async ngOnInit() {

@@ -20,13 +20,13 @@ export class TaskListComponent extends BaseComponent implements OnInit {
   taskDataSource = new MatTableDataSource<Task>();
   @ViewChild(MatPaginator) paginator?: MatPaginator;
 
-  columns = ['id', 'designation', 'sequence','taskDuration','date setting','remarks'];
+  columns = ['id', 'designation', 'sequence','taskDuration','date setting','remarks', 'actions'];
 
   constructor(private taskService: TaskService, private dialog: MatDialog,
     private headerService: HeaderService, private router: Router, private snackBar: MatSnackBar,
     protected override translate: TranslateService) {
     super(translate);
-    this.headerService.setPage('nav.tasks');
+    this.headerService.setPage('Tasks');
   }
 
   async ngOnInit() {

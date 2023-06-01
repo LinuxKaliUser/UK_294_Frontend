@@ -9,13 +9,13 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 })
 export class MealService {
 
-  readonly backendUrl = 'meals';
+  readonly backendUrl = 'meal';
 
   constructor(private http: HttpClient) {
   }
 
   public getList(): Observable<Meal[]> {
-    return this.http.get<Meal[]>(environment.backendBaseUrl + this.backendUrl);
+    return this.http.get<Meal[]>(environment.backendBaseUrl + this.backendUrl+"s");
   }
 
   public getOne(id: number): Observable<Meal> {

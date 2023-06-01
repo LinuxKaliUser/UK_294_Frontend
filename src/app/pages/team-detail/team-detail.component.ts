@@ -17,8 +17,7 @@ export class TeamDetailComponent extends BaseComponent implements OnInit {
   team = new Team();
   public objForm = new UntypedFormGroup({
     name: new UntypedFormControl(''),
-    team: new UntypedFormControl(''),
-    dateSetting: new UntypedFormControl(''),
+    totalMembers: new UntypedFormControl(''),
     remarks: new UntypedFormControl(''),
   });
 
@@ -34,11 +33,11 @@ export class TeamDetailComponent extends BaseComponent implements OnInit {
 
       this.teamService.getOne(id).subscribe(obj => {
         this.team = obj;
-        this.headerService.setPage('team_edit');
+        this.headerService.setPage('Team Edit');
         this.objForm = this.formBuilder.group(obj);
       });
     } else {
-      this.headerService.setPage('team_new');
+      this.headerService.setPage('Team New');
       this.objForm = this.formBuilder.group(this.team);
     }
   }

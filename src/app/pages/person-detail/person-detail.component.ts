@@ -35,11 +35,11 @@ export default class PersonDetailComponent extends BaseComponent implements OnIn
 
       this.personService.getOne(id).subscribe(obj => {
         this.person = obj;
-        this.headerService.setPage('person_edit');
+        this.headerService.setPage('Person Edit');
         this.objForm = this.formBuilder.group(obj);
       });
     } else {
-      this.headerService.setPage('person_new');
+      this.headerService.setPage('Person New');
       this.objForm = this.formBuilder.group(this.person);
     }
   }

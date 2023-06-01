@@ -31,19 +31,14 @@
       <td *matCellDef="let element" mat-cell> {{element.name}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="sequence">
-      <th *matHeaderCellDef mat-header-cell>sequence</th>
-      <td *matCellDef="let element" mat-cell> {{element.sequence}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="total members">
+    <ng-container matColumnDef="totalMembers">
       <th *matHeaderCellDef mat-header-cell>Total Members</th>
       <td *matCellDef="let element" mat-cell> {{element.task}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="date setting">
-      <th *matHeaderCellDef mat-header-cell>date setting</th>
-      <td *matCellDef="let element" mat-cell> {{element.dateSetting}} </td>
+    <ng-container matColumnDef="persons">
+      <th *matHeaderCellDef mat-header-cell>persons</th>
+      <td *matCellDef="let element" mat-cell> {{element.persons}} </td>
     </ng-container>
 
     <ng-container matColumnDef="remarks">

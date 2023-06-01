@@ -20,8 +20,8 @@ import { MealService } from 'src/app/service/meal.service';
 export class MealDetailComponent extends BaseComponent implements OnInit {
   meal = new Meal();
   public objForm = new UntypedFormGroup({
-    name: new UntypedFormControl(''),
-    meal: new UntypedFormControl(''),
+    designation: new UntypedFormControl(''),
+    cost: new UntypedFormControl(''),
     dateSetting: new UntypedFormControl(''),
     remarks: new UntypedFormControl(''),
   });
@@ -38,11 +38,11 @@ export class MealDetailComponent extends BaseComponent implements OnInit {
 
       this.mealService.getOne(id).subscribe(obj => {
         this.meal = obj;
-        this.headerService.setPage('meal_edit');
+        this.headerService.setPage('Meal edit');
         this.objForm = this.formBuilder.group(obj);
       });
     } else {
-      this.headerService.setPage('meal_new');
+      this.headerService.setPage('Meal new');
       this.objForm = this.formBuilder.group(this.meal);
     }
   }

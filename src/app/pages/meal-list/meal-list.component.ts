@@ -21,13 +21,13 @@ export class MealListComponent extends BaseComponent implements OnInit,AfterView
  mealDataSource = new MatTableDataSource<Meal>();
   @ViewChild(MatPaginator) paginator?: MatPaginator;
 
-  columns = ['id', 'name', 'sequence','task','date setting','remarks'];
+  columns = ['id', 'designation', 'sequence','cost','date setting','remarks', 'actions'];
 
   constructor(private mealService:MealService, private dialog: MatDialog,
     private headerService: HeaderService, private router: Router, private snackBar: MatSnackBar,
     protected override translate: TranslateService) {
     super(translate);
-    this.headerService.setPage('nav.meal');
+    this.headerService.setPage('Meals');
   }
 
   async ngOnInit() {

@@ -20,13 +20,13 @@ export class TeamListComponent extends BaseComponent implements OnInit,AfterView
   teamDataSource = new MatTableDataSource<Team>();
   @ViewChild(MatPaginator) paginator?: MatPaginator;
 
-  columns = ['id', 'name', 'sequence','task','date setting','remarks', 'actions'];
+  columns = ['id', 'name','totalMembers', 'persons','remarks', 'actions'];
 
   constructor(private teamService: TeamService, private dialog: MatDialog,
     private headerService: HeaderService, private router: Router, private snackBar: MatSnackBar,
     protected override translate: TranslateService) {
     super(translate);
-    this.headerService.setPage('teams');
+    this.headerService.setPage('Teams');
   }
 
   async ngOnInit() {

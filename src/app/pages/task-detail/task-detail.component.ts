@@ -17,8 +17,8 @@ export class TaskDetailComponent extends BaseComponent implements OnInit {
 
   task = new Task();
   public objForm = new UntypedFormGroup({
-    name: new UntypedFormControl(''),
-    task: new UntypedFormControl(''),
+    designation: new UntypedFormControl(''),
+    taskDuration: new UntypedFormControl(''),
     dateSetting: new UntypedFormControl(''),
     remarks: new UntypedFormControl(''),
   });
@@ -35,11 +35,11 @@ export class TaskDetailComponent extends BaseComponent implements OnInit {
 
       this.taskService.getOne(id).subscribe(obj => {
         this.task = obj;
-        this.headerService.setPage('task_edit');
+        this.headerService.setPage('Task Edit');
         this.objForm = this.formBuilder.group(obj);
       });
     } else {
-      this.headerService.setPage('task_new');
+      this.headerService.setPage('Task New');
       this.objForm = this.formBuilder.group(this.task);
     }
   }
