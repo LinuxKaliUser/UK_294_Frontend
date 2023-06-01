@@ -18,6 +18,9 @@ export default class PersonDetailComponent extends BaseComponent implements OnIn
   person = new Person();
   public objForm = new UntypedFormGroup({
     name: new UntypedFormControl(''),
+    task: new UntypedFormControl(''),
+    dateSetting: new UntypedFormControl(''),
+    remarks: new UntypedFormControl(''),
   });
 
   constructor(private router: Router, private headerService: HeaderService, private route: ActivatedRoute,
@@ -32,17 +35,17 @@ export default class PersonDetailComponent extends BaseComponent implements OnIn
 
       this.personService.getOne(id).subscribe(obj => {
         this.person = obj;
-        this.headerService.setPage('nav.person_edit');
+        this.headerService.setPage('Person Edit');
         this.objForm = this.formBuilder.group(obj);
       });
     } else {
-      this.headerService.setPage('nav.person_new');
+      this.headerService.setPage('Person New');
       this.objForm = this.formBuilder.group(this.person);
     }
   }
 
   async back() {
-    await this.router.navigate(['person']);
+    await this.router.navigate(['persons']);
   }
 
 

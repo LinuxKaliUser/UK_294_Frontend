@@ -20,13 +20,13 @@ export class PersonListComponent extends BaseComponent implements OnInit,AfterVi
   personDataSource = new MatTableDataSource<Person>();
   @ViewChild(MatPaginator) paginator?: MatPaginator;
 
-  columns = ['id', 'name', 'sequence','task','date setting','remarks'];
+  columns = ['id', 'name', 'sequence','task','date setting','remarks', 'actions'];
 
   constructor(private personService: PersonService, private dialog: MatDialog,
     private headerService: HeaderService, private router: Router, private snackBar: MatSnackBar,
     protected override translate: TranslateService) {
     super(translate);
-    this.headerService.setPage('nav.person');
+    this.headerService.setPage('Persons');
   }
 
   async ngOnInit() {

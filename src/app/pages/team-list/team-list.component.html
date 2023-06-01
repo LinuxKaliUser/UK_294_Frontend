@@ -1,1 +1,55 @@
-<p>team-list works!</p>
+<div>
+  <div>
+    <mat-toolbar *appIsInRole="'admin'" color="primary">
+      <span>
+        <button (click)="add()" *appIsInRole="'admin'" color="primary" mat-button style="color: white">
+          <mat-icon>group_add</mat-icon>
+        </button>
+      </span>
+    </mat-toolbar>
+  </div>
+  <table [dataSource]="teamDataSource" class="mat-elevation-z8 persons-table" mat-table>
+    <ng-container matColumnDef="actions">
+      <th *matHeaderCellDef class="w-75 th-center" mat-header-cell></th>
+      <td *matCellDef="let element" mat-cell style="text-align: end">
+        <button (click)="edit(element)" *appIsInRole="'admin'" color="primary" mat-button>
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button (click)="delete(element)" *appIsInRole="'admin'" color="warn" mat-button>
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="id">
+      <th *matHeaderCellDef mat-header-cell>id</th>
+      <td *matCellDef="let element" mat-cell> {{element.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th *matHeaderCellDef mat-header-cell>name</th>
+      <td *matCellDef="let element" mat-cell> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="totalMembers">
+      <th *matHeaderCellDef mat-header-cell>Total Members</th>
+      <td *matCellDef="let element" mat-cell> {{element.task}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="persons">
+      <th *matHeaderCellDef mat-header-cell>persons</th>
+      <td *matCellDef="let element" mat-cell> {{element.persons}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="remarks">
+      <th *matHeaderCellDef mat-header-cell>remarks</th>
+      <td *matCellDef="let element" mat-cell> {{element.remarks}} </td>
+    </ng-container>
+    <tr *matHeaderRowDef="columns" mat-header-row></tr>
+    <tr *matRowDef="let row; columns: columns;" mat-row></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[3, 10]" [pageSize]="10"
+                 showFirstLastButtons>
+  </mat-paginator>
+</div>
+

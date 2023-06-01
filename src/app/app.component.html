@@ -14,19 +14,19 @@
             <mat-icon>dashboard</mat-icon>&nbsp;{{'Dashboard' }}</button>
         </div>
         <div>
-          <button [routerLink]="['person']" color="primary" mat-button>
+          <button [routerLink]="['persons']" color="primary" mat-button>
             <mat-icon>person</mat-icon>Person</button>
         </div>
         <div>
-          <button [routerLink]="['meal']" color="primary" mat-button>
+          <button [routerLink]="['meals']" color="primary" mat-button>
             <mat-icon>set_meal</mat-icon>&nbsp;{{'Meal' }}</button>
         </div>
         <div>
-          <button [routerLink]="['task']" color="primary" mat-button>
+          <button [routerLink]="['tasks']" color="primary" mat-button>
             <mat-icon>task</mat-icon>&nbsp;{{'Task'}}</button>
         </div>
         <div>
-          <button [routerLink]="['team']" color="primary" mat-button>
+          <button [routerLink]="['teams']" color="primary" mat-button>
             <mat-icon>groups</mat-icon>&nbsp;{{'Team'}}</button>
         </div>
         <div *ngIf="oauthService.hasValidAccessToken()" style="margin-top: 50px">

@@ -9,13 +9,13 @@ import { Observable } from 'rxjs';
 })
 export class TaskService {
 
-  readonly backendUrl = 'tasks';
+  readonly backendUrl = 'task';
 
   constructor(private http: HttpClient) {
   }
 
   public getList(): Observable<Task[]> {
-    return this.http.get<Task[]>(environment.backendBaseUrl + this.backendUrl);
+    return this.http.get<Task[]>(environment.backendBaseUrl + this.backendUrl+"s");
   }
 
   public getOne(id: number): Observable<Task> {
