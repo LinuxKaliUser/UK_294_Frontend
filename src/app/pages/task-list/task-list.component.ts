@@ -26,7 +26,7 @@ export class TaskListComponent extends BaseComponent implements OnInit {
     private headerService: HeaderService, private router: Router, private snackBar: MatSnackBar,
     protected override translate: TranslateService) {
     super(translate);
-    this.headerService.setPage('nav.task');
+    this.headerService.setPage('nav.tasks');
   }
 
   async ngOnInit() {

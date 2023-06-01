@@ -1,8 +1,7 @@
-import { Component, OnInit,ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit,ViewChild } from '@angular/core';
 import { BaseComponent } from 'src/app/components/base/base.component';
-import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { HeaderService } from 'src/app/service/header.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import {  Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Meal } from 'src/app/dataaccess/meal';
 import { MealService } from 'src/app/service/meal.service';
@@ -18,7 +17,7 @@ import { MatTableDataSource } from '@angular/material/table';
   templateUrl: './meal-list.component.html',
   styleUrls: ['./meal-list.component.scss'],
 })
-export default class MealListComponent extends BaseComponent implements OnInit {
+export default class MealListComponent extends BaseComponent implements OnInit,AfterViewInit  {
  mealDataSource = new MatTableDataSource<Meal>();
   @ViewChild(MatPaginator) paginator?: MatPaginator;
 
@@ -35,6 +34,7 @@ export default class MealListComponent extends BaseComponent implements OnInit {
     await this.reloadData();
   }
 
+  // eslint-disable-next-line @angular-eslint/use-lifecycle-interface
   ngAfterViewInit() {
     if (this.paginator) {
       this.mealDataSource.paginator = this.paginator;

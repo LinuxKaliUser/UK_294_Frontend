@@ -9,13 +9,13 @@ import {environment} from '../../environments/environment';
 })
 export class PersonService {
 
-  readonly backendUrl = 'persons';
+  readonly backendUrl = 'person';
 
   constructor(private http: HttpClient) {
   }
 
   public getList(): Observable<Person[]> {
-    return this.http.get<Person[]>(environment.backendBaseUrl + this.backendUrl);
+    return this.http.get<Person[]>(environment.backendBaseUrl + this.backendUrl+"s");
   }
 
   public getOne(id: number): Observable<Person> {

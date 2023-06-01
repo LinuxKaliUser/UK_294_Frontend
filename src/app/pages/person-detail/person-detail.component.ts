@@ -32,17 +32,17 @@ export default class PersonDetailComponent extends BaseComponent implements OnIn
 
       this.personService.getOne(id).subscribe(obj => {
         this.person = obj;
-        this.headerService.setPage('nav.person_edit');
+        this.headerService.setPage('person_edit');
         this.objForm = this.formBuilder.group(obj);
       });
     } else {
-      this.headerService.setPage('nav.person_new');
+      this.headerService.setPage('person_new');
       this.objForm = this.formBuilder.group(this.person);
     }
   }
 
   async back() {
-    await this.router.navigate(['person']);
+    await this.router.navigate(['persons']);
   }
 
 
