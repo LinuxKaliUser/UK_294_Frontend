@@ -41,7 +41,7 @@ describe('PersonService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-  it('should return a list ofpersons', (done: DoneFn) => {
+  it('should return a list of persons', (done: DoneFn) => {
     httpSpy.get.and.nextWith(fakePersons);
 
     service.getList().subscribe({
