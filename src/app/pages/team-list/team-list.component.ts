@@ -57,8 +57,8 @@ export class TeamListComponent extends BaseComponent implements OnInit,AfterView
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
       maxWidth: '400px',
       data: {
-        title: 'dialogs.title_delete',
-        message: 'dialogs.message_delete'
+        title: 'Team deletion',
+        message: 'Do you want this team deleted?'
       }
     });
 

@@ -21,7 +21,7 @@ export class MealListComponent extends BaseComponent implements OnInit,AfterView
  mealDataSource = new MatTableDataSource<Meal>();
   @ViewChild(MatPaginator) paginator?: MatPaginator;
 
-  columns = ['id', 'designation', 'sequence','cost','date setting','remarks', 'actions'];
+  columns = ['id', 'designation', 'sequence','cost','dateSetting','remarks', 'actions'];
 
   constructor(private mealService:MealService, private dialog: MatDialog,
     private headerService: HeaderService, private router: Router, private snackBar: MatSnackBar,
@@ -34,7 +34,6 @@ export class MealListComponent extends BaseComponent implements OnInit,AfterView
     await this.reloadData();
   }
 
-  // eslint-disable-next-line @angular-eslint/use-lifecycle-interface
   ngAfterViewInit() {
     if (this.paginator) {
       this.mealDataSource.paginator = this.paginator;
@@ -59,8 +58,8 @@ export class MealListComponent extends BaseComponent implements OnInit,AfterView
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
       maxWidth: '400px',
       data: {
-        title: 'dialogs.title_delete',
-        message: 'dialogs.message_delete'
+        title: 'Meal deletion',
+        message: 'Do you want this meal deleted?'
       }
     });
 
