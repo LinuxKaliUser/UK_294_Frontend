@@ -1,5 +1,3 @@
-
-import Big from 'big.js';
 export class Meal {
   public id!: number;
   public designation = '';
