@@ -3,7 +3,7 @@
     <mat-toolbar *appIsInRole="'admin'" color="primary">
       <span>
         <button (click)="add()" *appIsInRole="'admin'" color="primary" mat-button style="color: white">
-          <mat-icon>group_add</mat-icon>
+          <mat-icon>group_add</mat-icon><mat-card-title>Add Team</mat-card-title>
         </button>
       </span>
     </mat-toolbar>
@@ -32,7 +32,7 @@
     </ng-container>
 
     <ng-container matColumnDef="totalMembers">
-      <th *matHeaderCellDef mat-header-cell>Total Members</th>
+      <th *matHeaderCellDef mat-header-cell>total members</th>
       <td *matCellDef="let element" mat-cell> {{element.task}} </td>
     </ng-container>
 

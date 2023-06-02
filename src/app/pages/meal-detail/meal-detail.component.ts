@@ -21,7 +21,7 @@ export class MealDetailComponent extends BaseComponent implements OnInit {
   meal = new Meal();
   public objForm = new UntypedFormGroup({
     designation: new UntypedFormControl(''),
-    cost: new UntypedFormControl(''),
+    cost: new UntypedFormControl(0.0),
     dateSetting: new UntypedFormControl(''),
     remarks: new UntypedFormControl(''),
   });

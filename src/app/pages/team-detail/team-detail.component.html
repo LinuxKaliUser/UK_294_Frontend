@@ -19,13 +19,7 @@
       </mat-form-field>
       <mat-form-field>
         <mat-label>totalmembers</mat-label>
-        <input #inputTotalMembers formControlName="totalmembers" matInput maxlength="50">
-        <mat-hint align="end">{{inputTotalMembers.value.length || 0}}/50</mat-hint>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>person</mat-label>
-        <input #inputPerson formControlName="person" matInput maxlength="50">
-        <mat-hint align="end">{{inputPerson.value.length || 0}}/50</mat-hint>
+        <input #inputTotalMembers formControlName="totalmembers" matInput type="text" inputmode="decimal" pattern="[0-9]" maxlength="6">
       </mat-form-field>
       <mat-form-field>
         <mat-label>remarks</mat-label>
