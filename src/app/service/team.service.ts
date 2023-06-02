@@ -15,7 +15,7 @@ export class TeamService {
   }
 
   public getList(): Observable<Team[]> {
-    return this.http.get<Team[]>(environment.backendBaseUrl + this.backendUrl+"s");
+    return this.http.get<Team[]>(environment.backendBaseUrl + this.backendUrl);
   }
 
   public getOne(id: number): Observable<Team> {

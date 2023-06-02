@@ -21,7 +21,7 @@ const routes: Routes = [
 {path: 'noaccess', component: NoAccessComponent},
 {
   path: 'persons', canActivate: [AppAuthGuard], component: PersonListComponent, pathMatch: 'full',
-  data: {roles: [AppRoles.Admin]}
+  data: {roles: [AppRoles.Read]}
 },
 {
   path: 'person', canActivate: [AppAuthGuard], component: PersonDetailComponent, pathMatch: 'full',
@@ -33,7 +33,7 @@ const routes: Routes = [
 },
 {
   path: 'meals', canActivate: [AppAuthGuard], component: MealListComponent, pathMatch: 'full',
-  data: {roles: [AppRoles.Admin]}
+  data: {roles: [AppRoles.Read]}
 },
 {
   path: 'meal', canActivate: [AppAuthGuard], component: MealDetailComponent, pathMatch: 'full',
@@ -45,7 +45,7 @@ const routes: Routes = [
 },
 {
   path: 'tasks', canActivate: [AppAuthGuard], component: TaskListComponent, pathMatch: 'full',
-  data: {roles: [AppRoles.Admin]}
+  data: {roles: [AppRoles.Read]}
 },
 {
   path: 'task', canActivate: [AppAuthGuard], component: TaskDetailComponent, pathMatch: 'full',
@@ -57,7 +57,7 @@ const routes: Routes = [
 },
 {
   path: 'teams', canActivate: [AppAuthGuard], component: TeamListComponent, pathMatch: 'full',
-  data: {roles: [AppRoles.Admin]}
+  data: {roles: [AppRoles.Read]}
 },
 {
   path: 'team', canActivate: [AppAuthGuard], component: TeamDetailComponent, pathMatch: 'full',

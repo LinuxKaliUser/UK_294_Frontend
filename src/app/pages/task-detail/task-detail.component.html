@@ -19,8 +19,7 @@
       </mat-form-field>
       <mat-form-field>
         <mat-label>taskduration</mat-label>
-        <input #inputTaskDuration formControlName="taskDuration" matInput maxlength="50">
-        <mat-hint align="end">{{inputTaskDuration.value.length || 0}}/50</mat-hint>
+        <input #inputTaskDuration formControlName="taskDuration" matInput type="number">
       </mat-form-field>
       <mat-form-field>
         <mat-label>datesetting</mat-label>

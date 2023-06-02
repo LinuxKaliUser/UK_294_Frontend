@@ -1,4 +1,3 @@
-
 export class Meal {
   public id!: number;
   public designation = '';

@@ -3,12 +3,12 @@
     <mat-toolbar *appIsInRole="'admin'" color="primary">
       <span>
         <button (click)="add()" *appIsInRole="'admin'" color="primary" mat-button style="color: white">
-          <mat-icon>note_add</mat-icon><mat-card-title>Add</mat-card-title>
+          <mat-icon>note_add</mat-icon><mat-card-title>Add Task</mat-card-title>
         </button>
       </span>
     </mat-toolbar>
   </div>
-  <table [dataSource]="taskDataSource" class="mat-elevation-z8 persons-table" mat-table>
+  <table [dataSource]="taskDataSource" class="mat-elevation-z8 tasks-table" mat-table>
     <ng-container matColumnDef="actions">
       <th *matHeaderCellDef class="w-75 th-center" mat-header-cell></th>
       <td *matCellDef="let element" mat-cell style="text-align: end">
@@ -39,7 +39,7 @@
       <td *matCellDef="let element" mat-cell> {{element.taskDuration}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="date setting">
+    <ng-container matColumnDef="dateSetting">
       <th *matHeaderCellDef mat-header-cell>date setting</th>
       <td *matCellDef="let element" mat-cell> {{element.dateSetting}} </td>
     </ng-container>

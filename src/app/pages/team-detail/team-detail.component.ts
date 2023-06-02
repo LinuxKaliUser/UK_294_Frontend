@@ -18,6 +18,7 @@ export class TeamDetailComponent extends BaseComponent implements OnInit {
   public objForm = new UntypedFormGroup({
     name: new UntypedFormControl(''),
     totalMembers: new UntypedFormControl(''),
+    person: new UntypedFormControl(''),
     remarks: new UntypedFormControl(''),
   });
 

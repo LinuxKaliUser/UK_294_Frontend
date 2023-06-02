@@ -11,7 +11,7 @@ import {OAuthService} from 'angular-oauth2-oidc';
 export class NoAccessComponent {
 
   constructor(private authService: AppAuthService, private headerService: HeaderService, public oauthService: OAuthService) {
-    this.headerService.setPage('nav.noaccess');
+    this.headerService.setPage('NO ACCESS');
   }
 
   public login() {
