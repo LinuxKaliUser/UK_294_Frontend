@@ -21,7 +21,7 @@ const routes: Routes = [
 {path: 'noaccess', component: NoAccessComponent},
 {
   path: 'persons', canActivate: [AppAuthGuard], component: PersonListComponent, pathMatch: 'full',
-  data: {roles: [AppRoles.Admin]}
+  data: {roles: [AppRoles.Read]}
 },
 {
   path: 'person', canActivate: [AppAuthGuard], component: PersonDetailComponent, pathMatch: 'full',
@@ -29,11 +29,11 @@ const routes: Routes = [
 },
 {
   path: 'person/:id', canActivate: [AppAuthGuard], component: PersonDetailComponent, pathMatch: 'full',
-  data: {roles: [AppRoles.Admin]}
+  data: {roles: [AppRoles.Update]}
 },
 {
   path: 'meals', canActivate: [AppAuthGuard], component: MealListComponent, pathMatch: 'full',
-  data: {roles: [AppRoles.Admin]}
+  data: {roles: [AppRoles.Read]}
 },
 {
   path: 'meal', canActivate: [AppAuthGuard], component: MealDetailComponent, pathMatch: 'full',
@@ -41,11 +41,11 @@ const routes: Routes = [
 },
 {
   path: 'meal/:id', canActivate: [AppAuthGuard], component: MealDetailComponent, pathMatch: 'full',
-  data: {roles: [AppRoles.Admin]}
+  data: {roles: [AppRoles.Update]}
 },
 {
   path: 'tasks', canActivate: [AppAuthGuard], component: TaskListComponent, pathMatch: 'full',
-  data: {roles: [AppRoles.Admin]}
+  data: {roles: [AppRoles.Read]}
 },
 {
   path: 'task', canActivate: [AppAuthGuard], component: TaskDetailComponent, pathMatch: 'full',
@@ -53,11 +53,11 @@ const routes: Routes = [
 },
 {
   path: 'task/:id', canActivate: [AppAuthGuard], component: TaskDetailComponent, pathMatch: 'full',
-  data: {roles: [AppRoles.Admin]}
+  data: {roles: [AppRoles.Update]}
 },
 {
   path: 'teams', canActivate: [AppAuthGuard], component: TeamListComponent, pathMatch: 'full',
-  data: {roles: [AppRoles.Admin]}
+  data: {roles: [AppRoles.Read]}
 },
 {
   path: 'team', canActivate: [AppAuthGuard], component: TeamDetailComponent, pathMatch: 'full',
@@ -65,7 +65,7 @@ const routes: Routes = [
 },
 {
   path: 'team/:id', canActivate: [AppAuthGuard], component: TeamDetailComponent, pathMatch: 'full',
-  data: {roles: [AppRoles.Admin]}
+  data: {roles: [AppRoles.Update]}
 },
 ];
 
